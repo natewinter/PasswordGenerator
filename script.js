@@ -34,55 +34,63 @@ function generatePassword() {
   // if that checks if user confirmed
   if (wantNumber) {
     // for loop that runs random amount of times: need to change ranNum length?
-    for (i = 0; i < ranNum.length; i++) {
-    // for (i = 0; i < Math.floor(Math.random() * ranNum.length; i++) {
+    for (var i = 0; i < ranNum.length; i++) {
+      // for (i = 0; i < Math.floor(Math.random() * ranNum.length; i++) {
       // push to master array
-      master.push(ranNum[i])
+      master.push(ranNum[Math.floor(Math.random() * ranNum.length)])
+
+
       console.log(master)
     }
   }
-  
+
   // create variable and give confirmation prompt for lowercase
   var wantLower = confirm("Would you like lowercase?")
   // if that checks if user confirmed
   if (wantLower) {
     // for loop that runs random amount of times
-    for (i = 0; i < ranLow.length; i++) {
+    for (var i = 0; i < ranLow.length; i++) {
       // push to master array
-      master.push(ranLow[i])
+      master.push(ranLow[Math.floor(Math.random() * ranLow.length)])
       console.log(master)
     }
   }
-  
+
   // create variable and give confirmation prompt for uppercase
   var wantUpper = confirm("Would you like Uppercase?")
   // if that checks if user confirmed
   if (wantUpper) {
     // for loop that runs random amount of times
-    for (i = 0; i < ranUpp.length; i++) {
+    for (var i = 0; i < ranUpp.length; i++) {
       // push to master array
-      
-      master.push(ranUpp[i])
+
+      master.push(ranUpp[Math.floor(Math.random() * ranUpp.length)])
       console.log(master)
     }
   }
-  
+
   // create variable and give confirmation prompt for special characters
   var wantSpecial = confirm("Would you like special characters?")
   // if that checks if user confirmed
   if (wantSpecial) {
     // for loop that runs random amount of times
-    for (i = 0; i < ranSym.length; i++) {
+    for (var i = 0; i < ranSym.length; i++) {
       // push to master array
-      master.push(ranSym[i])
+      master.push(ranSym[Math.floor(Math.random() * ranSym.length)])
       console.log(master)
     }
-  }
+}
+
+var finalPass = final
+
   // run for loop 1 less than want length times 
-  for (i = 0; i < wantLength; i++) {
-    final = final + master[Math.floor(Math.random() * master.length)];
+
+  for (var i = 0; i < wantLength; i++) {
+    finalPass += master[Math.floor(Math.random() * master.length)];
   }
-  return final
+  final = ""
+
+  return finalPass
 }
 
 
