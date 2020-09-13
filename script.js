@@ -79,9 +79,9 @@ function generatePassword() {
       master.push(ranSym[Math.floor(Math.random() * ranSym.length)])
       console.log(master)
     }
-}
+  }
 
-var finalPass = final
+  var finalPass = final
 
   // run for loop 1 less than want length times 
 
